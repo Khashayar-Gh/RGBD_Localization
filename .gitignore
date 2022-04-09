@@ -1,4 +1,7 @@
 /.ipynb_checkpoints
 /.idea
+/rgb
+/depth
+/dataset.zip
 accelerometer.txt
 Kinect_xyz_MarkIII.ipynb

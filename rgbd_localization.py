@@ -113,26 +113,26 @@ for level in range(number_of_used_imgs):
     X_0 = Coo_to_level_0(X_ii, level, R, T, TrajectoryGT.iloc[start_ind].to_numpy())
     trajectory_rgbd[:, level] = X_0.reshape(-1)
 
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(5, 5))
 plt.plot(TrajectoryGT['timestamp'], TrajectoryGT['tx'])
 rgbd_ts = [float(rgbd_time) for rgbd_time in rgb_depth_names[0].to_numpy()]
 rgbd_ts = [rgbd_ts[i] for i in used_imges]
 plt.plot(rgbd_ts, trajectory_rgbd[0, :])
-plt.legend(['GT', 'SLAM'])
+plt.legend(['Ground truth', 'Estimated'])
 plt.xlabel('Timestamp (s)')
 plt.ylabel('x (m)')
 
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(5, 5))
 plt.plot(TrajectoryGT['timestamp'], TrajectoryGT['ty'])
 plt.plot(rgbd_ts, trajectory_rgbd[1, :])
-plt.legend(['GT', 'SLAM'])
+plt.legend(['Ground truth', 'Estimated'])
 plt.xlabel('Timestamp (s)')
 plt.ylabel('y (m)')
 
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(5, 5))
 plt.plot(TrajectoryGT['timestamp'], TrajectoryGT['tz'])
 plt.plot(rgbd_ts, trajectory_rgbd[2, :])
-plt.legend(['GT', 'SLAM'])
+plt.legend(['Ground truth', 'Estimated'])
 plt.xlabel('Timestamp (s)')
 plt.ylabel('z (m)')
 plt.show()

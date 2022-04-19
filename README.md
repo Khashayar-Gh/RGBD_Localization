@@ -13,25 +13,8 @@ $ pip install -r requirements.txt
 ## How it works
 
 - By a frequency determined by ```img_freq```, 2 images are compared at each iteration.
-- SIFT [[2]](#2) is used to find key points in the    Clone this repo.
-    Download the dataset from here.[1]
-    Place the rgb and depth folders where the repo is cloned.
-    Use the following command to install the requirements.
-
-$ pip install -r requirements.txt
-
-    Run the rgbd_localization.py
-
-How it works
-
-    By a frequency determined by img_freq, 2 images are compared at each iteration.
-    SIFT [2] is used to find key points in the 2 RGB images and matches are found by the brute force method.
-    Inliers are determined by finding Homography between matched pixel points using the Least-Median robust method (LMEDS).
-    Then, by using the depth images, 3D pints of the matched inliers are generated.
-    The Rotation and Translation matrices are found by the method suggested in [3] from the 3D coordinates.
-    By knowing the first ground truth positions and the relative orientation between every 2 frames, the trajectory is estimated.
- 2 RGB images and matches are found by the brute force method.
-- Inliers are determined by finding Homography between matched pixel points using the Least-Median robust method (LMEDS).
+- SIFT [[2]](#2) is used to find key points in the 2 images.
+- Inliers are determined by finding Homography between matched pixel coordinates using the Least-Median robust method (LMEDS).
 - Then, by using the depth images, 3D pints of the matched inliers are generated.
 - The Rotation and Translation matrices are found by the method suggested in [[3]](#3) from the 3D coordinates.
 - By knowing the first ground truth positions and the relative orientation between every 2 frames, the trajectory is estimated

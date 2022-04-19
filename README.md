@@ -16,7 +16,7 @@ $ pip install -r requirements.txt
 - SIFT [[2]](#2) is used to find key points in the 2 images.
 - Inliers are determined by finding Homography between matched pixel coordinates using the Least-Median robust method (LMEDS).
 - Then, by using the depth images, 3D pints of the matched inliers are generated.
-- The Rotation and Translation matrices are found by the method suggested in [[3]](#3) from the 3D coordinates.
+- The rotation and translation matrices are found by the method suggested in [[3]](#3) from the 3D coordinates.
 - By knowing the first ground truth positions and the relative orientation between every 2 frames, the trajectory is estimated
 
 ## Expected results

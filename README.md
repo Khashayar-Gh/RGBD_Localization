@@ -1,7 +1,8 @@
 # RGBD_Localization
 ## How to run the script
+- I suggest using Linux as your operating system.
 - Clone this repo.
-- Download the dataset from [here](https://vision.in.tum.de/data/datasets/rgbd-dataset/download#freiburg1_xyz).[[1]](#1)
+- Download the dataset from [here](https://vision.in.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_xyz.tgz).[[1]](#1)
 - Place the rgb and depth folders where the repo is cloned.
 - Use the following command to install the requirements.
 ```

@@ -3,5 +3,6 @@
 /rgb
 /depth
 /dataset.zip
+*.png
 accelerometer.txt
 Kinect_xyz_MarkIII.ipynb
